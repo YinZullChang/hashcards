@@ -12,6 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-fn main() {
-    println!("Hello, world!");
+mod cli;
+mod error;
+
+use std::process::ExitCode;
+
+use crate::cli::entrypoint;
+
+fn main() -> ExitCode {
+    match entrypoint() {
+        Ok(_) => ExitCode::SUCCESS,
+        Err(e) => {
+            eprintln!("hashcards: {e}");
+            ExitCode::FAILURE
+        }
+    }
 }
