@@ -23,6 +23,7 @@ mod helper;
 mod markdown;
 mod parser;
 mod types;
+mod utils;
 
 use std::process::ExitCode;
 
