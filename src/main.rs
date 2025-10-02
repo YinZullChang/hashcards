@@ -12,15 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-mod check;
 mod cli;
+mod cmd;
 mod db;
-mod drill;
 mod error;
 mod fsrs;
 mod markdown;
 mod parser;
-mod stats;
 mod types;
 
 use std::process::ExitCode;
